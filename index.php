@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Template</title>
+    <title>PHP Introduction</title>
 
-    <meta name="description" content="Template HTML file">
+    <meta name="description" content="Introduction PHP file">
     <meta name="author" content="James McGraw-Allen">
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -21,7 +21,27 @@
 
 <body>
 
-<h1>Website Template</h1>
+<h1>Intro to PHP</h1>
 
+<?php
+/*
+Within HTML, PHP code is enclosed in special start and end processing
+instructions that allow you to jump into and out of 'PHP mode'
+*/
+
+$hour = date('H');
+$timeOfDay = '';
+
+if ($hour < '12') {
+    $timeOfDay = 'morning';
+} elseif ($hour < 18) {
+    $timeOfDay = 'afternoon';
+} else {
+    $timeOfDay = 'evening';
+}
+
+echo '<p>Good ' . $timeOfDay . "!</p>";
+?>
+<p><a href="message.php">Go to our motivation page</a> for a message.</p>
 </body>
 </html>
